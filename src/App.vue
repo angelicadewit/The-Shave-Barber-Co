@@ -45,17 +45,17 @@ export default {
 
 .top-element{
 	display: flex;
+	margin: 0 auto;
 	// justify-content: center;
 
 	.header{
-		align-self: center;
-		margin: 9% 15%;
+		margin: auto;
 	}
 }
 
 .logo{
 	align-self: flex-start;
-	margin: 5%;
+	// margin-right: auto;
 	
 	img{
 		width: 200px;
@@ -67,7 +67,7 @@ nav {
 	justify-content: space-between;
 	height: 100%;
 	a {
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 3rem;
 		text-transform: uppercase;
 		color: #A3CAC0;

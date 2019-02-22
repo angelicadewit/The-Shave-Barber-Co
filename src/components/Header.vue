@@ -1,8 +1,10 @@
 <template>
+
   <div class="header">
     <h2>{{ msg }}</h2>
-    <div class="spacer"></div>
+      <div class="spacer"></div>
   </div>
+
 </template>
 
 <script>
@@ -22,7 +24,7 @@ export default {
 }
 .spacer{
   background: url("../assets/gold-spacer-element.png") no-repeat 50%;
-  height: 30px;
+  height: 50px;
   background-size: cover;
   width: 100%;
 }
@@ -33,6 +35,7 @@ h2{
   color: #A3CAC0;
   letter-spacing: 2px;
   padding: 2px 20px;
+  font-size: 30px;
 }
 
 </style>
