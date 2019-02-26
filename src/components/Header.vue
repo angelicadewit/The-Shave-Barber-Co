@@ -22,12 +22,20 @@ export default {
   height: auto;
   width: fit-content;
   align-self: center;
+  
+  @include tablet{
+        margin-top: -4%;
+  }
 }
 .spacer{
   background: url("../assets/gold-spacer-element.png") no-repeat 50%;
   height: 50px;
   background-size: cover;
   width: 100%;
+
+  @include tablet{
+    height: 30px;
+  }
 }
 
 h2{
@@ -37,6 +45,10 @@ h2{
   letter-spacing: 2px;
   padding: 2px 20px;
   font-size: 30px;
+
+  @include tablet{
+    font-size: 20px;
+  }
 }
 
 </style>

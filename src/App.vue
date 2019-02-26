@@ -1,13 +1,17 @@
 <template>
 	<div>
 		<div id="app">
+			<div class="header-container">
+				<router-link to="/" class="logo"><img src="../src/assets/logo.png" alt=""></router-link>
+				<header-component msg="It Pays To Look Good."></header-component>
+			</div>
 			<nav>
-				<div class="header-container">
-					<router-link to="/" class="logo"><img src="../src/assets/logo.png" alt=""></router-link>
-					<header-component msg="It Pays To Look Good."></header-component>
+				<div class="services-link">
+					<router-link to="/services">Services</router-link>
 				</div>
-				<router-link to="/services" class="services-link">Services</router-link>
-				<router-link to="/team" class="team-link">Team</router-link>
+				<div class="team-link">
+					<router-link to="/team">Team</router-link>
+				</div>
 			</nav>
 			<router-view/>
 		</div>
@@ -44,14 +48,43 @@ export default {
 nav {
 	a {
 		font-weight: 300;
-		font-size: 26px;
+		font-size: 3rem;
 		text-transform: uppercase;
+		text-decoration: none;
 		color: #A3CAC0;
 
 		&.router-link-exact-active {
 			color: #42b983;
 		}
 	}
+
+	.services-link,
+	.team-link{
+		@include tablet{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			height: 1.5em;
+			margin: auto;
+		}
+	}
+		
+	.services-link{
+		@include tablet{
+			left: 0;
+			transform-origin: 0 50%;
+			transform: rotate(-90deg) translate(-50%, 50%);
+		}
+	}
+
+	.team-link{
+		@include tablet{
+			right: 0;
+			transform-origin: 100% 50%;
+			transform: rotate(90deg) translate(50%, 50%);
+		}
+	}
+
 }
 
 .header-container{
