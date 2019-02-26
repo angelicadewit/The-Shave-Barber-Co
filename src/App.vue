@@ -1,29 +1,28 @@
 <template>
-	<div id="app">
-		<div class="top-element">
-			<router-link to="/" class="logo"><img alt="The Shave Barber Co" :src="require('@/assets/logo.png')"></router-link>
-			<Header msg="It Pays To Look Good."/>
-		</div>
-		<nav>
-			<div class="flushed-left">
-				<router-link to="/services">Services</router-link>
-			</div>
-			<div class="flushed-right">
+	<div>
+		<div id="app">
+			<nav>
+				<div class="header-container">
+					<router-link to="/" class="logo"><img src="../src/assets/logo.png" alt=""></router-link>
+					<header-component msg="It Pays To Look Good."></header-component>
+				</div>
+				<router-link to="/services" class="services-link">Services</router-link>
 				<router-link to="/team" class="team-link">Team</router-link>
-			</div>
-		</nav>
-		<router-view/>
+			</nav>
+			<router-view/>
+		</div>
 	</div>
 </template>
 
+
+
 <script>
-// @ is an alias to /src
-import Header from '@/components/Header.vue'
+import HeaderComponent from '@/components/Header.vue'
 
 export default {
 	name: 'home',
 	components: {
-		Header
+		HeaderComponent
 	}
 }
 </script>
@@ -38,70 +37,36 @@ export default {
 	font-family: "stymie", serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
-	width: 100%;
-	height: 100%;
-}
-
-.top-element{
-	display: flex;
-	margin: 0 auto;
-	// justify-content: center;
-
-	.header{
-		margin: auto;
-	}
-}
-
-.logo{
-	align-self: flex-start;
-	// margin-right: auto;
-	
-	img{
-		width: 200px;
-	}
+	text-align: center;
+	color: #2c3e50;	
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	height: 100%;
 	a {
-		font-weight: 400;
-		font-size: 3rem;
+		font-weight: 300;
+		font-size: 26px;
 		text-transform: uppercase;
 		color: #A3CAC0;
-		text-decoration: none;
-		
-		&.services-link{
-			align-self: flex-start;
-			left: 0;
-			padding: 0px 25px;
-			transform: rotate(-90deg);
-		}
 
 		&.router-link-exact-active {
 			color: #42b983;
 		}
 	}
+}
 
-	.flushed-left,
-	.flushed-right{
-		transform-origin: 0 100%;
-		position: absolute;
-		height: 25px;
-		width: 100%;
+.header-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	img{
+		width: 200px;
 	}
-	.flushed-left{
-		transform: rotate(-90deg);
-		left: 25px;
-		bottom: 35%;
-	}
-	.flushed-right{
-		transform: rotate(90deg);
-		left: 99%;
-		left: 98%;
-    	bottom: 53%
+
+	.logo{
+		@include tablet{
+			align-self: flex-start;
+		}
 	}
 }
 

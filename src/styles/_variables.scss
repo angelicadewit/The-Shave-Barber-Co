@@ -1,0 +1,22 @@
+$tablet-breakpoint: 700px;
+$desktop-breakpoint: 1024px;
+$bigdesktop-breakpoint: 1100px;
+// $superbigdesktop-breakpoint: 1400px;
+
+@mixin tablet {
+	@media only screen and (min-width: $tablet-breakpoint){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: $desktop-breakpoint){
+		@content;
+	}
+}
+
+@mixin bg-desktop {
+	@media only screen and (min-width: $bigdesktop-breakpoint){
+		@content;
+	}
+}

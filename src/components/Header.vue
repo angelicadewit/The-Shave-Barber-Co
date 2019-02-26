@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'header-component',
   props: {
     msg: String
   }
@@ -21,6 +21,7 @@ export default {
 .header{
   height: auto;
   width: fit-content;
+  align-self: center;
 }
 .spacer{
   background: url("../assets/gold-spacer-element.png") no-repeat 50%;

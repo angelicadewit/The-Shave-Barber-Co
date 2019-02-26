@@ -29,15 +29,20 @@
 // }
 
 .hero{
-	margin: 10% auto;
+	margin: 0% auto;
 	display: flex;
   justify-content: center;
-  background: url(../assets/demask-background.png) no-repeat 40%;
+  background: url(../assets/demask-background.png) no-repeat;
+  background-size: contain;
   padding: 50px;
   position: relative;
+  width: 60vw;
+  height: 40vw;
 
   img{
-    border: 10px solid black;
+    border: 30px solid black;
+    width: 100%;
+
   }
 
   h2{
