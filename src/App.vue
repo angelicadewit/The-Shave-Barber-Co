@@ -93,12 +93,17 @@ nav {
 	justify-content: center;
 
 	img{
-		width: 200px;
+		width: 80%;
+
+		@include tablet{
+			width: 40%;
+		}
 	}
 
 	.logo{
-		@include tablet{
+		@include desktop{
 			align-self: flex-start;
+			transform: translate(25%,30%);
 		}
 	}
 }

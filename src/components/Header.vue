@@ -24,9 +24,10 @@ export default {
   align-self: center;
   
   @include tablet{
-        margin-top: -4%;
+    margin-top: -4%;
   }
 }
+
 .spacer{
   background: url("../assets/gold-spacer-element.png") no-repeat 50%;
   height: 50px;

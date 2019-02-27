@@ -1,6 +1,7 @@
 <template>
   <div class="homepage">
     <div class="hero">
+    <div class="a-letter"></div>
       <h2>
         <div class="top">
           <span>Traditional</span>
@@ -17,8 +18,23 @@
 
 
 
-
 <style scoped lang="scss">
+
+.a-letter{
+  background: url(../assets/a.png) no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  
+  @include desktop{
+    top: -75px;
+    left: -70px;
+  }
+}
 
 .hero{
 	margin: 3% auto;
@@ -36,6 +52,11 @@
     height: 40vw;
   }
 
+  @include bg-desktop{
+    width: 50vw;
+    height: 30vw;
+  }
+
   img{
     border: 30px solid black;
     width: 100%;
@@ -45,7 +66,7 @@
   h2{
     color: white;
     position: relative;
-    font-size: 1rem;
+    font-size: 6vw;
     text-transform: uppercase;
     letter-spacing: 1rem;
     margin-block-start: 0.0em;
@@ -53,10 +74,8 @@
     text-align: center;
     
 
-    @include tablet{
-      font-size: 2.3rem;
-      display: flex;
-      justify-content: center;
+    @include bg-desktop{
+      font-size: 5.5vw;
     }
   
     span{
@@ -71,17 +90,21 @@
   }
   
   .top{
-    left: 0;
+    left: 40px;
   }
 
   .bottom{
     bottom: 0;
-    left: 50%;
-    transform: translateX(14%);
+    left: 40px;
     margin: 0 auto;
 
     span{
       letter-spacing: 2rem;
+
+      @include desktop{
+        letter-spacing: 4rem;
+        
+      }
     }
   }
 }
