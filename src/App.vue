@@ -1,9 +1,16 @@
 <template>
 	<div>
+		<div class="corner corner-top corner-right"></div>
+		<div class="corner corner-top corner-left"></div>
+		<div class="corner corner-bottom corner-right"></div>
+		<div class="corner corner-bottom corner-left"></div>
+
+
 		<div id="app">
 			<div class="header-container">
 				<router-link to="/" class="logo"><img src="../src/assets/logo.png" alt=""></router-link>
 				<header-component msg="It Pays To Look Good."></header-component>
+				<!-- <header-component :bind="msg"></header-component> -->
 			</div>
 			<nav>
 				<div class="services-link">
@@ -17,7 +24,6 @@
 		</div>
 	</div>
 </template>
-
 
 
 <script>
@@ -34,8 +40,8 @@ export default {
 
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Lora:700');
-@import url('https://use.typekit.net/cco7rbw.css');
+
+@import "@/styles/_reset.scss";
 
 #app {
 	font-family: "stymie", serif;
@@ -48,10 +54,11 @@ export default {
 nav {
 	a {
 		font-weight: 300;
-		font-size: 3rem;
+		font-size: 2.5em;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: #A3CAC0;
+		font-weight: 500;
 
 		&.router-link-exact-active {
 			color: #42b983;
@@ -98,14 +105,26 @@ nav {
 		@include tablet{
 			width: 40%;
 		}
+
+		@include desktop{
+			width: 60%;
+		}
 	}
 
 	.logo{
+		position: relative;
+		z-index: 5; 
+
 		@include desktop{
 			align-self: flex-start;
 			transform: translate(25%,30%);
 		}
 	}
+}
+
+h2{
+	font-family: "lora";
+    font-weight: 700;
 }
 
 </style>

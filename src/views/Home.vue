@@ -16,16 +16,29 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      msg: 'It Pays To Look Good.',
+    }
+  }
+}
+</script>
+
 
 
 <style scoped lang="scss">
 
+
+
 .a-letter{
   background: url(../assets/a.png) no-repeat;
   background-size: contain;
-  opacity: 0.8;
-  width: 25vw;
-  height: 25vw;
+  mix-blend-mode: multiply;
+  // opacity: 0.8;
+  width: 20vw;
+  height: 20vw;
   position: absolute;
   top: -25px;
   left: -20px;
@@ -37,7 +50,7 @@
 }
 
 .hero{
-	margin: 3% auto;
+	margin: 1% auto;
 	display: flex;
   justify-content: center;
   background: url(../assets/demask-background.png) no-repeat;
@@ -45,12 +58,12 @@
   padding: 50px;
   position: relative;
   width: 70vw;
-  height: 40vw;
+  height: 50vw;
 
-  @include tablet{
-    width: 60vw;
-    height: 40vw;
-  }
+  // @include tablet{
+  //   width: 60vw;
+  //   height: 40vw;
+  // }
 
   @include bg-desktop{
     width: 50vw;
