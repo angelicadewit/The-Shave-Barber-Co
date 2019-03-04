@@ -17,16 +17,13 @@ export default {
 
 <style scoped lang="scss">
     .barber{
-        width: 45%;
+        width: 30vw;
         height: 0;
-        padding-bottom: 45%;
+        padding-bottom: 20vw;
+        margin-bottom: 1%;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: 50% 50%;
-
-        img{
-            object-fit: cover;
-        }
         
 
         h3{

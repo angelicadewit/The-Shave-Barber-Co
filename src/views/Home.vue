@@ -37,13 +37,15 @@ export default {
   background-size: contain;
   mix-blend-mode: multiply;
   // opacity: 0.8;
-  width: 20vw;
-  height: 20vw;
+  width: 40vw;
+  height: 40vw;
   position: absolute;
-  top: -25px;
-  left: -20px;
+  top: -35px;
+  left: -5px;
   
   @include desktop{
+    width: 25vw;
+    height: 25vw;
     top: -75px;
     left: -70px;
   }
@@ -81,18 +83,23 @@ export default {
     position: relative;
     font-size: 6vw;
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: 1.5rem;
     margin-block-start: 0.0em;
     margin-block-end: 0.0em;
     text-align: center;
+    left: -10%;
+
+    @include tablet{
+      left: 0%;
+    }
     
 
     @include bg-desktop{
-      font-size: 5.5vw;
+      font-size: 4.5vw;
     }
   
     span{
-        display: block;
+      display: block;
     }
   }
 
@@ -112,11 +119,19 @@ export default {
     margin: 0 auto;
 
     span{
-      letter-spacing: 2rem;
+      letter-spacing: 2.5rem;
+
+
+      @include tablet{
+        letter-spacing: 3.5rem;
+      }
 
       @include desktop{
-        letter-spacing: 4rem;
-        
+        letter-spacing: 5rem;
+      }
+
+      @include bg-desktop{
+        letter-spacing: 5.5rem;
       }
     }
   }

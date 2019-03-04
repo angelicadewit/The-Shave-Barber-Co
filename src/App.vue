@@ -104,6 +104,7 @@ nav {
 
 		@include tablet{
 			width: 40%;
+			padding-bottom: 3%;
 		}
 
 		@include desktop{

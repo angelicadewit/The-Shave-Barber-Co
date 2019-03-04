@@ -43,7 +43,6 @@ h2{
   margin-bottom: 0px;
   text-transform: uppercase;
   color: #A3CAC0;
-  letter-spacing: 2px;
   padding: 2px 20px;
   font-size: 30px;
 
