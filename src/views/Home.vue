@@ -2,14 +2,16 @@
   <div class="homepage">
     <div class="hero">
     <div class="a-letter"></div>
-      <h2>
-        <div class="top">
-          <span>Traditional</span>
-        </div>
-        <div class="bottom">
-          <span>Barber</span>
-          <span>Shop</span>
-        </div>
+      <h2 class="top">
+        <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>t</span><span>i</span><span>o</span><span>n</span><span>a</span><span>l</span>
+      </h2>
+      <h2 class="bottom">
+        <span class="first-line">
+          <span>B</span><span>a</span><span>r</span><span>b</span><span>e</span><span>r</span>
+        </span>
+        <span class="second-line">
+          <span>&nbsp;</span><span>S</span><span>h</span><span>o</span><span>p</span><span>&nbsp;</span>
+        </span>
       </h2>
       <img src="../assets/photo.png" alt="">
     </div>
@@ -53,14 +55,15 @@ export default {
 
 .hero{
 	margin: 1% auto;
-	display: flex;
-  justify-content: center;
+	// display: flex;
+  // justify-content: center;
   background: url(../assets/demask-background.png) no-repeat;
   background-size: contain;
   padding: 50px;
   position: relative;
   width: 70vw;
-  height: 50vw;
+  max-width: 800px;
+  // max-width: calc(100vw - 400px);
 
   // @include tablet{
   //   width: 60vw;
@@ -69,7 +72,7 @@ export default {
 
   @include bg-desktop{
     width: 50vw;
-    height: 30vw;
+    // height: 30vw;
   }
 
   img{
@@ -79,60 +82,44 @@ export default {
   }
 
   h2{
+    position: absolute;
     color: white;
-    position: relative;
     font-size: 6vw;
     text-transform: uppercase;
-    letter-spacing: 1.5rem;
-    margin-block-start: 0.0em;
-    margin-block-end: 0.0em;
+    // letter-spacing: 1rem;
+    // margin-block-start: 1.5em;
+    // margin-block-end: 0.0em;
     text-align: center;
-    left: -10%;
+    width: 100%;
+    padding: 50px;
+    top: 0;
+    left: 0;
 
-    @include tablet{
-      left: 0%;
+    &.top {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &.bottom {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      top: auto;
+      span {
+        font-size: 7vw;
+        display: flex;
+        justify-content: space-between;
+      }
     }
     
 
     @include bg-desktop{
-      font-size: 4.5vw;
+      font-size: 4vw;
     }
   
     span{
       display: block;
-    }
-  }
-
-  .top,
-  .bottom{
-    position: absolute;
-    margin: 2%;
-  }
-  
-  .top{
-    left: 40px;
-  }
-
-  .bottom{
-    bottom: 0;
-    left: 40px;
-    margin: 0 auto;
-
-    span{
-      letter-spacing: 2.5rem;
-
-
-      @include tablet{
-        letter-spacing: 3.5rem;
-      }
-
-      @include desktop{
-        letter-spacing: 5rem;
-      }
-
-      @include bg-desktop{
-        letter-spacing: 5.5rem;
-      }
     }
   }
 }

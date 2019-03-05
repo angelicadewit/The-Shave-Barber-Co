@@ -124,8 +124,7 @@ nav {
 }
 
 h2{
-	font-family: "lora";
-    font-weight: 700;
+	@include lora-bold;
 }
 
 </style>

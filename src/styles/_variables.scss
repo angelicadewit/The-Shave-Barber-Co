@@ -23,3 +23,11 @@ $bigdesktop-breakpoint: 1300px;
 		@content;
 	}
 }
+
+$teal: #99ccc0;
+$gold: #dabd9d;
+
+@mixin lora-bold{
+	font-family: "lora";
+    font-weight: 700;
+}

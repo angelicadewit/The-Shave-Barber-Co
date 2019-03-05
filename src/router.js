@@ -12,12 +12,20 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'home title',
+        headerClass: 'big'
+      }
     },
     {
       path: '/team',
       name: 'team',
-      component: Team
+      component: Team,
+      meta: {
+        title: 'team title',
+        headerClass: 'small'
+      }
     },
     // {
     //   path: '/services',

@@ -1,7 +1,7 @@
 <template>
 
-  <div class="header">
-    <h2>{{ msg }}</h2>
+  <div :class="'header header-'+$route.meta.headerClass">
+    <h2>{{ $route.meta.title }}</h2>
       <div class="spacer"></div>
   </div>
 
@@ -12,7 +12,8 @@ export default {
   name: 'header-component',
   props: {
     msg: String
-  }
+  },
+
 }
 </script>
 
@@ -45,10 +46,5 @@ h2{
   color: #A3CAC0;
   padding: 2px 20px;
   font-size: 30px;
-
-  @include tablet{
-    font-size: 20px;
-  }
 }
-
 </style>
