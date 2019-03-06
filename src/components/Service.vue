@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="description-text">
-            <p class="bio-text">
+            <p class="desc-text">
                 {{ barberCoService.description }}
             </p>
         </div>
@@ -33,6 +33,7 @@ export default {
 .service{
     font-size: 2.2rem;
 
+
     h3{
         color: #906337;
         text-transform: uppercase;
@@ -40,10 +41,19 @@ export default {
 
     .price-span{
         color: #906337;
-        background: url("../assets/beigespacer.png") no-repeat;
+        background-image: url("../assets/beigespacer.png");
+        background-repeat: no-repeat;
         background-size: contain;
+        cursor: pointer;
+
+        .book{
+            color:$header-teal;
+        }
 
         @include desktop {
+
+        background-position-x: 50%;
+
             .price {
                 display: inline;
             }
@@ -54,6 +64,7 @@ export default {
         span {
             background-color: white;
             padding: 0 5px;
+
             @include desktop {
                 padding: 0 10px;
 
@@ -75,9 +86,9 @@ export default {
         }
     }
 
-    // .book-span{
-    //     color: $header-teal;
-    // }
+    .desc-text{
+        font-size: 1.5rem;
+    }
 }
 </style>
 
