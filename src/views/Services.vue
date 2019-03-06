@@ -1,7 +1,7 @@
 <template>
     <div class="services">
         <ul class="services">
-            <service v-for="service in services" :key="service.id" :barberCoService="service"></service>
+            <service class="service-wrapper" v-for="service in services" :key="service.id" :barberCoService="service"></service>
         </ul>
     </div>
 </template>
@@ -67,9 +67,22 @@ export default {
     max-width: 800px;
     background: white url("../assets/barberchair.png") no-repeat 50%;
 }
+
+
 ul {
     margin: 10% auto;
     margin-bottom: 0%;
+
+    @include desktop{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service-wrapper{
+        @include desktop{
+            width: 40%;
+        }
+    }
 }
 
 </style>

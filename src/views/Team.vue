@@ -1,7 +1,7 @@
 <template>
   <div class="team">
     <ul class="thumbnails"> <!-- FOR TABLET AND UP-->
-      <div v-for="staffMember in staff" :key="staffMember.id" @click="currentBarber = staffMember">
+      <div class="barber-wrapper" v-for="staffMember in staff" :key="staffMember.id" @click="currentBarber = staffMember">
         <barber :key="staffMember.id" :class="[staffMember.class]" :valuedTeamMemberData="staffMember"></barber>
       </div>
     </ul>
@@ -70,13 +70,16 @@ ul {
   margin: 10% auto;
   margin-bottom: 0%;
 
+  .barber-wrapper {
+    width: 50%;
+  }
+
   &.thumbnails{
     display: none;
 
     @include desktop{
       display: flex;
-      flex-wrap: nowrap;
-      flex: 0 0 40%;
+      flex-wrap: wrap;
     }
   }
 }

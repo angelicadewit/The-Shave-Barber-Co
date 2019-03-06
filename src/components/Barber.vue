@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    
     .barber{
         width: 90%;
         margin: 1%;

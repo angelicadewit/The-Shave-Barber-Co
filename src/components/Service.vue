@@ -32,6 +32,11 @@ export default {
 
 .service{
     font-size: 2.2rem;
+    width: 50% auto;
+    margin: 10%;
+    @include desktop{
+        margin: 5%;
+    }
 
 
     h3{
@@ -87,7 +92,7 @@ export default {
     }
 
     .desc-text{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 </style>
