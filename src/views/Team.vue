@@ -70,24 +70,19 @@ ul {
   margin: 10% auto;
   margin-bottom: 0%;
 
-  @include desktop{   
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-
-
   &.thumbnails{
-    // display: none;
-    // hide these for mobile
+    display: none;
+
+    @include desktop{
+      display: flex;
+      flex-wrap: nowrap;
+      flex: 0 0 40%;
+    }
   }
-  // &.full-desc{
-  //   display: none;
-  // }
 }
 
-.overlay {
-  
-}
+// .overlay {
+
+// }
 
 </style>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Team from './views/Team.vue'
+import Services from './views/Services.vue'
 
 Vue.use(Router)
 
@@ -14,8 +15,8 @@ export default new Router({
       name: 'home',
       component: Home,
       meta: {
-        title: 'home title',
-        headerClass: 'big'
+        title: 'It Pays To Look Good.',
+        headerClass: 'home'
       }
     },
     {
@@ -23,14 +24,18 @@ export default new Router({
       name: 'team',
       component: Team,
       meta: {
-        title: 'team title',
-        headerClass: 'small'
+        title: 'Our Barbers',
+        headerClass: 'barber'
       }
     },
-    // {
-    //   path: '/services',
-    //   name: 'services',
-    //   component: Services
-    // }
+    {
+      path: '/services',
+      name: 'services',
+      component: Services,
+      meta: {
+        title: 'Our Services',
+        headerClass: 'services'
+      }
+    }
   ]
 })

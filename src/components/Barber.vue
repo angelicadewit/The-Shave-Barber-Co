@@ -23,13 +23,7 @@ export default {
         width: 90%;
         margin: 1%;
         position: relative;
-        
-
-        // @include desktop{
-        //     flex: 1 0 40%;
-        //     width: 10vw;
-        //     padding-bottom: 10vw;
-        // }
+        cursor: pointer;
 
         img{
             width: 90%;
@@ -41,12 +35,16 @@ export default {
             @include lora-bold;
             text-transform: uppercase;
             position: absolute;
-            top: 50%;
+            top: 47%;
+
+            @include desktop{
+                font-size: 2.2rem;
+            }
         }
 
         &::before{
             content: "";
-            width: 100%;
+            width: 90%;
             height: 100%;
             background-repeat: no-repeat;
             background-size: contain;

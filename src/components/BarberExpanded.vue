@@ -31,26 +31,24 @@ export default {
         width: 90%;
         margin: 5%;
         position: relative;
-        display: none;
-        // always show for mobile
+        display: block;
+
+        @include desktop{
+            display: none;
+        }
 
         &.active {
             display: block;
         }
         
 
-        // @include desktop{
-        //     flex: 1 0 40%;
-        //     width: 10vw;
-        //     padding-bottom: 10vw;
-        // }
 
         h3{
-            font-size: 5rem;
+            font-size: 5.5rem;
             @include lora-bold;
             text-transform: uppercase;
             position: absolute;
-            top: 45%;
+            top: 50%;
         } 
 
         &.gold-border{
