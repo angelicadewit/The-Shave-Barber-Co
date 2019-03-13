@@ -64,8 +64,21 @@ export default {
 .services{
     margin: auto;
     width: 70vw;
-    max-width: 800px;
-    background: white url("../assets/barberchair.png") no-repeat 50%;
+    max-width: 1000px;
+    background: white url("../assets/barberchair.png") no-repeat;
+    background-attachment: fixed;
+    background-size: 60%;
+    background-position-x: 55%;
+    background-position-y: 20%;
+
+    @include tablet{
+        background-position-y: 0%;
+    }
+
+    @include desktop{
+        background-size: 25%;
+        background-position-y: 50%;
+    }
 }
 
 
@@ -76,11 +89,12 @@ ul {
     @include desktop{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .service-wrapper{
         @include desktop{
-            width: 40%;
+            width: 30%;
         }
     }
 }

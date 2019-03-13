@@ -32,13 +32,20 @@ export default {
         margin: 5%;
         position: relative;
         display: block;
+        z-index: 9999;
 
         @include desktop{
             display: none;
-        }
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            max-width: 520px;
+            margin-right: -50%;
+            transform: translate(-70%,-50%);
 
-        &.active {
-            display: block;
+            &.active {
+                display: block;
+            } 
         }
         
 
