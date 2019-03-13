@@ -76,13 +76,13 @@ export default {
         background-attachment: fixed;
         background-size: 20%;
         background-position: 53% 50%;
-        margin-top: 5%;
+        // margin-top: 5%;
     }
 }
 
 
 ul {
-    margin: 10% auto;
+    // margin: 10% auto;
 
     @include desktop{
         display: flex;

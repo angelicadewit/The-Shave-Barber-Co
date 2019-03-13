@@ -128,23 +128,21 @@ h2{
 }
 
 .slide-left-enter-active,
-.slide-left-leave-active,
-.slide-right-enter-active,
-.slide-right-leave-active {
+.slide-left-leave-active{
 	transition-duration: 0.5s;
 	transition-property: opacity, transform;
-	transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
 	overflow: hidden;
+	opacity: 0;
 }
 
-.slide-left-enter{
-	opacity: 0;
-	transform: translate(2em, 0);
+.slide-left-enter,
+.slide-left-enter-active{
+	transform: translate(0, 2em);
+	transition-duration: 0.5s;
 }
 
 .slide-left-leave-active {
-	opacity: 0;
-	transform: translate(-2em, 0);
+	transform: translate(0, -2em);
 }
 
 </style>

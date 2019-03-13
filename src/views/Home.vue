@@ -36,7 +36,7 @@ export default {
 
 .a-letter{
   background: url(../assets/a.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
   mix-blend-mode: multiply;
   position: absolute;
   width: 25vw;
@@ -52,31 +52,22 @@ export default {
 }
 
 .hero{
-	margin: 1% auto;
-	// display: flex;
-  // justify-content: center;
+  margin: 1% auto;
   background: url(../assets/demask-background.png) no-repeat;
   background-size: contain;
   padding: 50px;
   position: relative;
   width: 70vw;
   max-width: 800px;
-  // max-width: calc(100vw - 400px);
-
-  // @include tablet{
-  //   width: 60vw;
-  //   height: 40vw;
-  // }
 
   @include bg-desktop{
+    margin-top: 5%;
     width: 50vw;
-    // height: 30vw;
   }
 
   img{
     border: 30px solid black;
     width: 100%;
-
   }
 
   h2{
@@ -84,9 +75,6 @@ export default {
     color: white;
     font-size: 6vw;
     text-transform: uppercase;
-    // letter-spacing: 1rem;
-    // margin-block-start: 1.5em;
-    // margin-block-end: 0.0em;
     text-align: center;
     width: 100%;
     padding: 50px;
