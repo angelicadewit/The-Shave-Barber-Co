@@ -62,29 +62,27 @@ export default {
 
 <style scoped lang="scss">
 .services{
-    margin: auto;
+    margin: 0 auto;
     width: 70vw;
     max-width: 1000px;
-    background: white url("../assets/barberchair.png") no-repeat;
-    background-attachment: fixed;
-    background-size: 60%;
-    background-position-x: 55%;
-    background-position-y: 20%;
+    background: white;
 
     @include tablet{
         background-position-y: 0%;
     }
 
     @include desktop{
-        background-size: 25%;
-        background-position-y: 50%;
+        background: white url("../assets/barberchair.png") no-repeat;
+        background-attachment: fixed;
+        background-size: 20%;
+        background-position: 53% 50%;
+        margin-top: 5%;
     }
 }
 
 
 ul {
     margin: 10% auto;
-    margin-bottom: 0%;
 
     @include desktop{
         display: flex;

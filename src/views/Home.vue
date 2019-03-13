@@ -38,18 +38,16 @@ export default {
   background: url(../assets/a.png) no-repeat;
   background-size: contain;
   mix-blend-mode: multiply;
-  // opacity: 0.8;
-  width: 40vw;
-  height: 40vw;
   position: absolute;
-  top: -35px;
-  left: -5px;
+  width: 25vw;
+  height: 25vw;
+  top: -75px;
+  left: -70px;
+  display: none;
+
   
   @include desktop{
-    width: 25vw;
-    height: 25vw;
-    top: -75px;
-    left: -70px;
+    display: block;
   }
 }
 

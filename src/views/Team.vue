@@ -5,10 +5,14 @@
         <barber :key="staffMember.id" :class="[staffMember.class]" :valuedTeamMemberData="staffMember"></barber>
       </div>
     </ul>
-    <div class="overlay" v-if="currentBarber" @click="currentBarber = null"></div>
-    <ul class="full-desc"> <!-- EXPANDED WITH DISPLAY AND STUFF SHOWN -->
-      <barber-expanded v-for="staffMember in staff" :key="staffMember.id" :valuedTeamMemberData="staffMember" :class="[staffMember.class, (currentBarber == staffMember)?'active':'']"></barber-expanded>
-    </ul>
+    <transition name="modal">
+      <div class="overlay" v-if="currentBarber" @click="currentBarber = null"></div>
+    </transition>
+      <ul class="full-desc"> <!-- EXPANDED WITH DISPLAY AND STUFF SHOWN -->
+      <transition-group name="modal" tag="div">
+        <barber-expanded v-for="staffMember in staff" :key="staffMember.id" :valuedTeamMemberData="staffMember" :class="[staffMember.class, (currentBarber == staffMember)?'active':'']"></barber-expanded>
+      </transition-group>
+      </ul>
   </div>
 </template>
 
@@ -68,7 +72,6 @@ export default {
 }
 ul {
   margin: 10% auto;
-  margin-bottom: 0%;
 
   .barber-wrapper {
     width: 50%;
@@ -85,21 +88,30 @@ ul {
 }
 
 .overlay {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.6);
-    // display: none;
-    z-index: 9998;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  // display: none;
+  z-index: 9998;
+  transition: opacity 0.5s;
 
-    @include desktop{
-      
-      &.active{
-        display: block;
-      }
+  @include desktop{
+    
+    &.active{
+      opacity: 1;
     }
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
 }
 
 </style>

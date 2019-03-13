@@ -20,7 +20,9 @@
 					<router-link to="/team">Team</router-link>
 				</div>
 			</nav>
-			<router-view/>
+			<transition name="slide-left">
+				<router-view/>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -61,7 +63,7 @@ nav {
 		font-weight: 500;
 
 		&.router-link-exact-active {
-			color: #42b983;
+			color: $gold;
 		}
 	}
 
@@ -91,7 +93,6 @@ nav {
 			transform: rotate(90deg) translate(50%, 50%);
 		}
 	}
-
 }
 
 .header-container{
@@ -100,10 +101,9 @@ nav {
 	justify-content: center;
 
 	img{
-		width: 80%;
+		width: 40%;
 
 		@include tablet{
-			width: 40%;
 			padding-bottom: 3%;
 		}
 
@@ -125,6 +125,26 @@ nav {
 
 h2{
 	@include lora-bold;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+	transition-duration: 0.5s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+	overflow: hidden;
+}
+
+.slide-left-enter{
+	opacity: 0;
+	transform: translate(2em, 0);
+}
+
+.slide-left-leave-active {
+	opacity: 0;
+	transform: translate(-2em, 0);
 }
 
 </style>

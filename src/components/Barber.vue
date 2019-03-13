@@ -1,8 +1,9 @@
 <template>
     <!-- <div class="left" -->
-    <li class="barber">
+    <li ref="barberLI" class="barber">
         <!-- <div class="barber-img" :style="'background-image: url(' + require(`@/assets/${valuedTeamMemberData.name}.png`) + ');'"> -->
         <div class="barber-extended">
+            <div class="border"></div>
             <h3>{{ valuedTeamMemberData.name }}</h3>
             <img :src="require(`@/assets/${valuedTeamMemberData.name}.png`)" alt="">
         </div>
@@ -14,6 +15,12 @@ export default {
     name: 'Barber-expanded',
     props: {
         valuedTeamMemberData: Object,
+    },
+    mounted() {
+        console.log('a wild barber appears', this.$refs.barberLI)
+        VanillaTilt.init( this.$refs.barberLI, {
+            max: 10,
+        } )
     }
 }
 </script>
@@ -22,13 +29,16 @@ export default {
     
     .barber{
         width: 90%;
-        margin: 1%;
+        margin: 5%;
         position: relative;
         cursor: pointer;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
 
         img{
             width: 90%;
             margin: 5%;
+            transform: translateZ(20px);
         }
 
         h3{
@@ -39,12 +49,13 @@ export default {
             top: 47%;
 
             @include desktop{
-                font-size: 2.2rem;
+                font-size: 4rem;
+                transform: translateZ(80px);
             }
         }
 
-        &::before{
-            content: "";
+        & .border{
+            // content: "";
             width: 90%;
             height: 100%;
             background-repeat: no-repeat;
@@ -52,12 +63,13 @@ export default {
             position: absolute;
             display: inline-block;
             left: 0;
+            transform: scale(0.93) translateZ(50px);
         }
 
         &.gold-border{
             color: $teal;
 
-            &::before{
+            & .border{
                 background-image: url("../assets/gold-border.png");
             }
         }
@@ -65,7 +77,7 @@ export default {
         &.teal-border{
             color: $gold;
 
-            &::before{
+            & .border{
                 background-image: url("../assets/turquoise-border.png");
             }
         }

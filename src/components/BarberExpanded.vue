@@ -2,7 +2,7 @@
     <!-- <div class="left" -->
     <li class="barber">
         <!-- <div class="barber-img" :style="'background-image: url(' + require(`@/assets/${valuedTeamMemberData.name}.png`) + ');'"> -->
-        <div class="image-wrapper">
+        <div class="image-wrapper" ref="barberLI">
             <h3>{{ valuedTeamMemberData.name }}</h3>
             <img :src="require(`@/assets/${valuedTeamMemberData.name}.png`)" alt="">
         </div>
@@ -22,6 +22,12 @@ export default {
     name: 'Barber-expanded',
     props: {
         valuedTeamMemberData: Object,
+    },
+    mounted() {
+        console.log('a wild barber appears', this.$refs.barberLI)
+        VanillaTilt.init( this.$refs.barberLI, {
+            max: 15,
+        } )
     }
 }
 </script>
@@ -33,29 +39,40 @@ export default {
         position: relative;
         display: block;
         z-index: 9999;
+        transform: translateZ(20px);
 
         @include desktop{
-            display: none;
+            // display: none;
+            opacity: 0;
+            visibility: hidden;
             top: 50%;
             left: 50%;
             position: absolute;
             max-width: 520px;
             margin-right: -50%;
             transform: translate(-70%,-50%);
+            transition: 0.5s;
 
             &.active {
-                display: block;
+                // display: block;
+                opacity: 1;
+                visibility: visible;
             } 
         }
         
 
 
         h3{
-            font-size: 5.5rem;
+            font-size: 2.2rem;
             @include lora-bold;
             text-transform: uppercase;
             position: absolute;
             top: 50%;
+
+            @include desktop{
+                font-size: 4rem;
+                transform: translateZ(30px);
+            }
         } 
 
         &.gold-border{
@@ -63,6 +80,7 @@ export default {
 
             .image-wrapper::before{
                 background-image: url("../assets/gold-border.png");
+                transform: scale(0.93) translateZ(40px);
             }
         }
 
@@ -71,16 +89,20 @@ export default {
 
             .image-wrapper::before{
                 background-image: url("../assets/turquoise-border.png");
+                transform: scale(0.93) translateZ(40px);
             }
         }
 
         .image-wrapper{
             position: relative;
-            z-index: 5;
+            z-index: 15;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
 
             img{
                 width: 95%;
                 margin: 5%;
+
             }
             
             &::before{
@@ -104,6 +126,7 @@ export default {
         margin-top: -20%;
         padding: 25% 5% 5%;
         transform: translateX(15%);
+        z-index: 3;
 
         .bio-text{
             font-size: 1rem;
