@@ -27,8 +27,10 @@ $bigdesktop-breakpoint: 1300px;
 $teal: #99ccc0;
 $gold: #dabd9d;
 $header-teal: #A3CAC0;
+$thickness: 35px;
+$height: 20px;
 
 @mixin lora-bold{
 	font-family: "lora";
-    font-weight: 700;
+	font-weight: 700;
 }

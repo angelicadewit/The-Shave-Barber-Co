@@ -36,13 +36,14 @@ export default {
 
 .a-letter{
   background: url(../assets/a.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
   mix-blend-mode: multiply;
+  opacity: 0.9;
   position: absolute;
   width: 25vw;
   height: 25vw;
-  top: -75px;
-  left: -70px;
+  top: -20%;
+  left: -20%;
   display: none;
 
   
@@ -61,7 +62,7 @@ export default {
   max-width: 800px;
 
   @include bg-desktop{
-    margin-top: 5%;
+    margin-top: 2%;
     width: 50vw;
   }
 

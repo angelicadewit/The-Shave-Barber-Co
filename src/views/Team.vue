@@ -72,6 +72,7 @@ export default {
 }
 ul {
   margin: 10% auto;
+  margin-top: 0;
 
   .barber-wrapper {
     width: 50%;
