@@ -14,13 +14,24 @@
           <span>&nbsp;</span><span>S</span><span>h</span><span>o</span><span>p</span><span>&nbsp;</span>
         </span>
       </h2>
-      <img src="../assets/photo.png" alt="">
+      <!-- <img src="../assets/photo.png" alt=""> -->
+      <video autoplay muted playsinline loop>
+        <source src="../assets/herovideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
+    <book-component></book-component>
   </div>
 </template>
 
 <script>
+
+import BookComponent from '@/components/BookNow.vue'
+
 export default {
+  components: {
+    BookComponent
+	},
   data() {
     return {
       msg: 'It Pays To Look Good.',
@@ -32,7 +43,6 @@ export default {
 
 
 <style scoped lang="scss">
-
 
 
 .a-letter{
@@ -57,10 +67,10 @@ export default {
   margin: 1% auto;
   background: url(../assets/demask-background.png) no-repeat;
   background-size: contain;
-  padding: 20px;
   position: relative;
   width: 75vw;
   max-width: 800px;
+  padding: 20px;
 
   @include tablet{
     padding: 50px;
@@ -72,7 +82,7 @@ export default {
     width: 50vw;
   }
 
-  img{
+  video{
     border: 10px solid black;
 
     @include desktop{
@@ -85,18 +95,17 @@ export default {
   position: absolute;
   background: url(../assets/florish.png) no-repeat;
   background-size: contain;
-  width: 50px;
-  height: 0;
-  padding-bottom: 50%;
-  display: none;
+  width: 30px;
+  height: 30px;
+  display: block;
+  top: 50%;
+  right: 0;
+  transform: translate(-30%,-30%);
 
   @include tablet{
-    display: block;
-  }
-
-  @include desktop{
-    top: 45%;
-    left: 90.5%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
   }
 }
 

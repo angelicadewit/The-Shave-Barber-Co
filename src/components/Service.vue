@@ -2,7 +2,6 @@
     <li class="service">
         <div>
             <h3>{{ barberCoService.name }}</h3>
-            <!-- <img :src="require(`@/assets/${valuedTeamMemberData.name}.png`)" alt=""> -->
             <p class="price-span">
                 <span class="price">${{ barberCoService.price }}</span>
                 <span class="book">Book</span>

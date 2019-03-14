@@ -35,7 +35,7 @@ export default {
           name: "david",
           image: "@/src/david.png",
           class: "gold-border",
-          bio: "David specializes in fades, tapering and scissor cuts. He is eager and is constantly practicing innovative men's grooming techniques. In his off time you can find Brooks outdoors, submerged in non-fiction, working out, travel",
+          bio: "David specializes in fades, tapering and scissor cuts. He is eager and is constantly practicing innovative men's grooming techniques. In his off time you can find David outdoors, submerged in non-fiction, working out, travel",
         },
         {
           id: 1,

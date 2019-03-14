@@ -130,7 +130,7 @@ nav {
 
 		@include desktop{
 			align-self: flex-start;
-			transform: translate(55%,30%);
+			transform: translate(40%,30%);
 		}
 	}
 }
