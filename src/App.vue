@@ -106,6 +106,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	padding-top: 20%;
 
 	@include desktop{
 		padding-top: 3%;

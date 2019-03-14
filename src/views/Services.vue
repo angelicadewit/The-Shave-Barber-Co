@@ -75,8 +75,7 @@ export default {
         background: white url("../assets/barberchair.png") no-repeat;
         background-attachment: fixed;
         background-size: 20%;
-        background-position: 53% 50%;
-        // margin-top: 5%;
+        background-position: 53% 60%;
     }
 }
 

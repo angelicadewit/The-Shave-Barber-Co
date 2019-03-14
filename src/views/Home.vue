@@ -5,6 +5,7 @@
       <h2 class="top">
         <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>t</span><span>i</span><span>o</span><span>n</span><span>a</span><span>l</span>
       </h2>
+      <div class="flourish"></div>
       <h2 class="bottom">
         <span class="first-line">
           <span>B</span><span>a</span><span>r</span><span>b</span><span>e</span><span>r</span>
@@ -47,7 +48,7 @@ export default {
   display: none;
 
   
-  @include desktop{
+  @include bg-desktop{
     display: block;
   }
 }
@@ -56,10 +57,15 @@ export default {
   margin: 1% auto;
   background: url(../assets/demask-background.png) no-repeat;
   background-size: contain;
-  padding: 50px;
+  padding: 20px;
   position: relative;
-  width: 70vw;
+  width: 75vw;
   max-width: 800px;
+
+  @include tablet{
+    padding: 50px;
+
+  }
 
   @include bg-desktop{
     margin-top: 2%;
@@ -67,9 +73,32 @@ export default {
   }
 
   img{
-    border: 30px solid black;
+    border: 10px solid black;
+
+    @include desktop{
+      border: 30px solid black;
+    }
     width: 100%;
   }
+
+  .flourish{
+  position: absolute;
+  background: url(../assets/florish.png) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 0;
+  padding-bottom: 50%;
+  display: none;
+
+  @include tablet{
+    display: block;
+  }
+
+  @include desktop{
+    top: 45%;
+    left: 90.5%;
+  }
+}
 
   h2{
     position: absolute;

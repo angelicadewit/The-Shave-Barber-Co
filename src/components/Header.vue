@@ -24,7 +24,11 @@ export default {
   width: fit-content;
   align-self: center;
   
-  @include tablet{
+  @include desktop{
+    margin-top: 4%;
+  }
+
+  @include bg-desktop{
     margin-top: -4%;
   }
 }
@@ -34,12 +38,14 @@ export default {
   background: url("../assets/gold-spacer-element.png") no-repeat 50%;
   height: 50px;
   background-size: contain;
-  width: 100%;
+  width: 83%;
+  margin: auto;
   display: block;
 
 
   @include tablet{
     height: 30px;
+    width: 100%;
   }
 
   &.services{
