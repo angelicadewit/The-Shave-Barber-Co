@@ -34,7 +34,7 @@ export default {
     width: 50% auto;
     margin: 10%;
     @include desktop{
-        margin: 5% 5% 0% 5%;
+        margin: 1% 5% 0% 5%;
     }
 
 

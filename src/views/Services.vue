@@ -1,5 +1,9 @@
 <template>
     <div class="services">
+        <div class="complimentary">
+            <p>Complimentary hot lather nape shaves with every cut!</p>
+            <div class="service-accent"></div>
+        </div>
         <ul class="services">
             <service class="service-wrapper" v-for="service in services" :key="service.id" :barberCoService="service"></service>
         </ul>
@@ -92,6 +96,35 @@ ul {
     .service-wrapper{
         @include desktop{
             width: 30%;
+        }
+    }
+}
+
+.complimentary{
+
+    p{
+        padding: 3% 5% 2%;
+        font-size: 1.4rem;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .service-accent{
+        background: url("../assets/service-accent.png") no-repeat 50%;
+        background-size: contain;
+        margin: 0 auto;
+        height: 50px;
+        width: 50px;
+        animation: ani-flip 1.5s infinite alternate-reverse;
+    }
+
+    @keyframes ani-flip{
+
+        from { 
+        transform: rotateY(0deg); 
+        } 
+        to { 
+            transform: rotateY(180deg); 
         }
     }
 }

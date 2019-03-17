@@ -10,9 +10,9 @@
             <p class="bio-text">
                 {{ valuedTeamMemberData.bio }}
             </p>
-            <p class="book-text">
-                Book {{ valuedTeamMemberData.name }}
-            </p>
+            <div class="book-btn">
+                <div class="pointer"></div><span>Book</span> {{ valuedTeamMemberData.name }}
+            </div>
         </div>
     </li>
 </template> 
@@ -38,7 +38,7 @@ export default {
         margin: 5%;
         position: relative;
         display: block;
-        z-index: 9999;
+        z-index: 100;
         transform: translateZ(20px);
 
         @include desktop{
@@ -125,16 +125,55 @@ export default {
         position: relative;
         margin-top: -20%;
         padding: 25% 5% 5%;
-        transform: translateX(15%);
+        transform: translateX(6%);
         z-index: 3;
+
+        @include desktop{
+            transform: translateX(15%);
+        }
+        
 
         .bio-text{
             font-size: 1rem;
+            text-align: left;
         }
 
-        .book-text{
-            font-size: 1.5rem;
+        .book-btn{
+            font-size: 2rem;
             padding: 5%;
+            display: flex;
+            justify-content: flex-end;
+            text-transform: uppercase;
+
+            .pointer{
+                width: 60px;
+                background: url("../assets/pointer.png") no-repeat 50%;
+                background-size: contain;
+                height: 30px;
+                animation: ani-poke 0.5s infinite;
+                margin-right: 10px;
+            }
+
+            span{
+                color: #84858b;
+                margin-right: 10px;
+                align-self: auto;
+            }
+        }
+    }
+
+    @keyframes ani-poke{
+        0% {
+            transform: translateX(0%);
+        }
+        20% {
+            transform: translateX(5%);
+        }
+        30% {
+            transform: translateX(0%);
+        }
+        80% {
+            transform: translateX(-5%);
         }
     }
 </style>

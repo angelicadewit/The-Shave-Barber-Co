@@ -2,7 +2,7 @@
 
   <div class="header">
     <h2 :class="$route.meta.headerClass">{{ $route.meta.title }}</h2>
-      <div :class="'spacer ' + $route.meta.headerClass"></div>
+    <div :class="'spacer ' + $route.meta.headerClass"></div>
   </div>
 
 </template>
@@ -21,7 +21,7 @@ export default {
 <style scoped lang="scss">
 .header{
   height: auto;
-  width: fit-content;
+  width: 75%;
   align-self: center;
   
   @include desktop{
@@ -61,6 +61,8 @@ h2{
   margin-bottom: 0px;
   text-transform: uppercase;
   padding: 2px 20px;
+  min-width: 200px;
+  margin: 0 auto;
 }
 
 .home{

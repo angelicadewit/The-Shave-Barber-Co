@@ -96,7 +96,7 @@ ul {
   left: 0;
   background: rgba(255, 255, 255, 0.8);
   // display: none;
-  z-index: 9998;
+  z-index: 98;
   transition: opacity 0.5s;
 
   @include desktop{

@@ -54,7 +54,7 @@ export default {
         color: #906337;
         @include lora-bold;
         align-self: center;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
     }
 
     .description-text{
@@ -82,18 +82,29 @@ export default {
         display: flex;
         justify-content: center;
         cursor: pointer;
+        margin-top: 2%;
     }
 
     .pointer{
-        width: 10vw;
+        width: 50px;
         background: url("../assets/pointer.png") no-repeat 50%;
         background-size: contain;
-        height: 0;
-        padding-bottom: 8vw;
+        height: 20px;
+        animation: ani-poke 0.5s infinite;
+    }
 
-        @include desktop{
-            padding-bottom: 2vw;
-            width: 4vw;
+    @keyframes ani-poke{
+        0% {
+            transform: translateX(0%);
+        }
+        20% {
+            transform: translateX(5%);
+        }
+        30% {
+            transform: translateX(0%);
+        }
+        80% {
+            transform: translateX(-5%);
         }
     }
 }

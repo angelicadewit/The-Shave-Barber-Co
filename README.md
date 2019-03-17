@@ -1,29 +1,16 @@
 # shaveco
 
-## Project setup
-```
-npm install
-```
+# The Shave Barber Company
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A redesign of [The Shave Barber Company](http://theshavebarbercompany.com) in collaboration with [Ali Taylor](http://alismithtaylor.com) geared towards a masculine audience. It was built using the Vue CLI and features Vanilla Tilt JS for some of the interactions.
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+## Built With
 
-### Lints and fixes files
-```
-npm run lint
-```
+* [Vue CLI](https://cli.vuejs.org/) - Vue CLI
+* [Vanilla Tilt](https://micku7zu.github.io/vanilla-tilt.js/) - Vanilla Tilt JS
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## View the site
+
+[Live Site](http://angelicadewit.com/shaveco)
