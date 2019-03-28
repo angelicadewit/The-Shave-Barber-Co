@@ -144,6 +144,7 @@ export default {
             display: flex;
             justify-content: flex-end;
             text-transform: uppercase;
+            cursor: pointer;
 
             .pointer{
                 width: 60px;
